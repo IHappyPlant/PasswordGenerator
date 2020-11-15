@@ -18,12 +18,12 @@ files.
 
 Clone this repository using command:
 ```shell script
-git clone https://github.com/IHappyPlant/PasswordGeneratorGui.git
+git clone https://github.com/ihappyPlant/password_generator_gui.git
 ```
 
 Then step into cloned repo using command:
 ```shell script
-cd PasswordGeneratorGui
+cd password_generator_gui
 ```
 
 ### Python
@@ -38,9 +38,12 @@ python3 -m password_generator
 ```
 
 ### Windows
-To install application in MS Windows, run commands:  
+In MS Windows you may install package into Python in another way: 
 1. ```shell script
     python3 setup.py bdist_msi
+    ```
+3. ```shell script
+    cd dist
     ```
 2. Run built installer to install application.  
 
