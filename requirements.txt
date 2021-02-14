@@ -1,2 +1,2 @@
-setuptools~=50.3.2
-PyQt5~=5.15.0
+setuptools
+PyQt5
