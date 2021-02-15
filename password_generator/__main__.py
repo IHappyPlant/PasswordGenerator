@@ -1,6 +1,6 @@
-# coding=utf-8
 """
-This file contains code for PasswordGeneratorGUI main class
+This module contains code for PasswordGeneratorGUI main class.
+It is used to generating and saving passwords with GUI.
 """
 import random
 import sys
@@ -27,18 +27,13 @@ class PasswordGeneratorGUI(QMainWindow, window.Ui_MainWindow):
         self.action_save.triggered.connect(self.save_password)
 
     def generate_password(self):
-        """
-        Generate password with required length
-        """
-        p = "".join(random.sample(self.aplha, int(self.pass_len_box.text())))
+        """Generate password with required length"""
+        p = ''.join(random.sample(self.aplha, int(self.pass_len_box.text())))
         self.display_password_area.setText(p)
 
     def save_password(self):
-        """
-        Save password to file
-        """
-        self.save_path = QFileDialog.getSaveFileName(self, 'Save to',
-                                                     'saved.txt')[0]
+        """Save password to file"""
+        save_path = QFileDialog.getSaveFileName(caption='Save to')[0]
         password = self.display_password_area.text()
         if self.save_path:
             with open(self.save_path, 'w') as f:
