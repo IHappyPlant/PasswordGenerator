@@ -4,6 +4,7 @@ It is used to generating and saving passwords with GUI.
 """
 import random
 import sys
+from string import ascii_letters, digits, punctuation
 
 from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow
 
@@ -19,12 +20,10 @@ class PasswordGeneratorGUI(QMainWindow, window.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.aplha = "abcdefghijklmnopqrstuvwxyz01234567890" \
-                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
-        self.save_path = None
-        self.pass_len_box.setMaximum(len(self.aplha))
         self.button_generate.clicked.connect(self.generate_password)
         self.action_save.triggered.connect(self.save_password)
+        self.aplha = ''.join((ascii_letters, digits, punctuation))
+        self.pass_len_box.setMaximum(len(self.aplha))
 
     def generate_password(self):
         """Generate password with required length"""
@@ -35,8 +34,8 @@ class PasswordGeneratorGUI(QMainWindow, window.Ui_MainWindow):
         """Save password to file"""
         save_path = QFileDialog.getSaveFileName(caption='Save to')[0]
         password = self.display_password_area.text()
-        if self.save_path:
-            with open(self.save_path, 'w') as f:
+        if save_path:
+            with open(save_path, 'w') as f:
                 f.write(password)
 
 
