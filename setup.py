@@ -8,7 +8,7 @@ required_packages = ['pyqt5']
 
 setup(
     name='password_generator',
-    version='1.0',
+    version='1.1',
     url='https://github.com/IHappyPlant/Password_Generator_Gui',
     author='IHappyPlant',
     author_email='karuk1998@yandex.ru',
@@ -25,6 +25,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Topic :: Utilities',
         'Topic :: Security',
         'Operating System :: POSIX :: Linux',
