@@ -1,4 +1,3 @@
-# coding=utf-8
 """
 This module contains code for deploying Password generator application
 """
@@ -7,9 +6,9 @@ from setuptools import setup
 required_packages = ['pyqt5']
 
 setup(
-    name='password_generator',
+    name='PasswordGenerator',
     version='1.1',
-    url='https://github.com/IHappyPlant/Password_Generator_Gui',
+    url='https://github.com/IHappyPlant/PasswordGenerator',
     author='IHappyPlant',
     author_email='karuk1998@yandex.ru',
     license='MIT',
@@ -26,6 +25,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Topic :: Utilities',
         'Topic :: Security',
         'Operating System :: POSIX :: Linux',
@@ -37,7 +37,6 @@ setup(
         'Natural Language :: English',
         'Environment :: X11 Applications :: Qt',
         'Intended Audience :: Developers',
-        'Intended Audience :: End Users/Desktop',
-        'Intended Audience :: Education'
+        'Intended Audience :: End Users/Desktop'
     ]
 )

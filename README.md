@@ -16,14 +16,14 @@ files.
 
 ## Installation
 
-Clone this repository using command:
+Clone repository with command:
 ```shell script
-git clone https://github.com/ihappyPlant/password_generator_gui.git
+git clone https://github.com/IHappyPlant/PasswordGenerator.git
 ```
 
-Then step into cloned repo using command:
+Then step into cloned repo with command:
 ```shell script
-cd password_generator_gui
+cd PasswordGenerator
 ```
 
 ### Python
@@ -31,10 +31,10 @@ To install application directly into Python, run command:
 ```shell script
 python3 setup.py install
 ```
-Installed package will be named ```password_generator```  
+Installed package will be named ```PasswordGenerator```  
 After installation, you can run it using command:
 ```shell script
-python3 -m password_generator
+python3 -m PasswordGenerator
 ```
 
 ### Windows
@@ -48,20 +48,17 @@ In MS Windows you may install package into Python in another way:
 2. Run built installer to install application.  
 
 #### Notes
-Windows 10 Defender may block installer, because it doesn't have signed 
-certificate. Just ignore it.
+Windows Defender may block .msi-installer, because it doesn't have 
+signed certificate. Just ignore it.
 
 ### PyInstaller
 
 You also may build executable file for your OS with PyInstaller.  
 For this, you need to do next steps:    
  1. ```shell script
-    pip3 install -r requirements.txt
+    pip3 install -r requirements.txt pyinstaller
     ```
  2. ```shell script
-    pip3 install pyinstaller
-    ```
- 3. ```shell script
     pyinstaller password_generator/__main__.py
     ```
 ## Releases
